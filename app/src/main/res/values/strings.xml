@@ -1,0 +1,68 @@
+<resources>
+    <string name="app_name">Character Sheet For TTRPG</string>
+    <string name="description">Deskripsi</string>
+    <string name="stats_names">Stats</string>
+    <string name="item_names">Item</string>
+    <string name="notes_names">Notes</string>
+
+    <!-- Item -->
+    <string-array name="item_name">
+        <item>Potion</item>
+        <item>Straight Sword</item>
+        <item>Leather Armor</item>
+    </string-array>
+    <string-array name="item_description">
+        <item>Health Potion</item>
+        <item>A sword with 1d8 + 1 slicing damage</item>
+        <item>An armor that give a +3 to Armor Class</item>
+    </string-array>
+    <integer-array name="item_photo">
+        <item>@drawable/potion</item>
+        <item>@drawable/sword</item>
+        <item>@drawable/armor</item>
+    </integer-array>
+
+    <!-- Stats -->
+
+    <string-array name="stat_name">
+        <item>HP</item>
+        <item>Strengh</item>
+        <item>Agility</item>
+        <item>Defense</item>
+        <item>Intelligence</item>
+    </string-array>
+    <string-array name="stat_description">
+        <item>47</item>
+        <item>10</item>
+        <item>15</item>
+        <item>9</item>
+        <item>13</item>
+    </string-array>
+    <integer-array name="stat_photo">
+        <item>@drawable/hp</item>
+        <item>@drawable/strength</item>
+        <item>@drawable/agility</item>
+        <item>@drawable/defense</item>
+        <item>@drawable/intelegence</item>
+    </integer-array>
+
+    <!-- Notes -->
+    <string-array name="note_name">
+        <item>Note</item>
+        <item>Book</item>
+        <item>Scroll</item>
+        <item>Mail</item>
+    </string-array>
+    <string-array name="note_description">
+        <item>A note containing someones writing</item>
+        <item>A story book about a kingdoms fall</item>
+        <item>A scroll containing ancient magic</item>
+        <item>A mail from inquisitor of light</item>
+    </string-array>
+    <integer-array name="note_photo">
+        <item>@drawable/notes</item>
+        <item>@drawable/book</item>
+        <item>@drawable/scroll</item>
+        <item>@drawable/mail</item>
+    </integer-array>
+</resources>

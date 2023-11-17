@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:background="@color/black">
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar_id"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:background="@drawable/app_bar_background">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/programmer_id"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:src="@drawable/pro"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="@color/gray"
+            app:civ_circle_background_color="@color/gray"/>
+
+        <TextView
+            android:id="@+id/character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your Character Name"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/programmer_id"
+            android:layout_marginLeft="8dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/appBar_id"
+        android:id="@+id/viewpager_id" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        android:id="@+id/tab_layout_id"
+        app:tabTextColor="@color/white"
+        app:tabIndicatorColor="@color/white"
+        android:background="@color/gray"/>
+</RelativeLayout>
