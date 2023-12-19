@@ -7,19 +7,13 @@
 
     <!-- Item -->
     <string-array name="item_name">
-        <item>Potion</item>
-        <item>Straight Sword</item>
-        <item>Leather Armor</item>
+
     </string-array>
     <string-array name="item_description">
-        <item>Health Potion</item>
-        <item>A sword with 1d8 + 1 slicing damage</item>
-        <item>An armor that give a +3 to Armor Class</item>
+
     </string-array>
     <integer-array name="item_photo">
-        <item>@drawable/potion</item>
-        <item>@drawable/sword</item>
-        <item>@drawable/armor</item>
+
     </integer-array>
 
     <!-- Stats -->
@@ -65,4 +59,6 @@
         <item>@drawable/scroll</item>
         <item>@drawable/mail</item>
     </integer-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

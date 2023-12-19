@@ -18,13 +18,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         tabLayout = (TabLayout) findViewById(R.id.tab_layout_id);
-        appBarLayout = (AppBarLayout) findViewById(R.id.appBar_id);
         viewPager = (ViewPager) findViewById(R.id.viewpager_id);
         ViewPagerAdapter adapter = new ViewPagerAdapter((getSupportFragmentManager()));
 
         adapter.AddFragment(new FragmentStats(), "Stats");
         adapter.AddFragment(new FragmentItems(), "Items");
-        adapter.AddFragment(new FragmentNotes(), "Notes");
+        adapter.AddFragment(new SpellFragment(), "Spells");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

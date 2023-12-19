@@ -3,6 +3,7 @@ package com.nashirul.uts_praktikum_mobile;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -15,8 +16,12 @@ public class ListItemsAdapter extends RecyclerView.Adapter<ListItemsAdapter.List
     private ArrayList<Items> listItems;
 
     private OnItemClickCallback onItemClickCallback;
+    private OnItemClickCallback onItemDelClickCallback;
     public void setOnItemClickCallback(OnItemClickCallback onItemClickCallback) {
         this.onItemClickCallback = onItemClickCallback;
+    }
+    public void setOnItemDelClickCallback(OnItemClickCallback onItemClickCallback) {
+        this.onItemDelClickCallback = onItemClickCallback;
     }
 
     public ListItemsAdapter(ArrayList<Items> list){
@@ -33,11 +38,13 @@ public class ListItemsAdapter extends RecyclerView.Adapter<ListItemsAdapter.List
     @Override
     public void onBindViewHolder(@NonNull final ListViewHolder holder, int position) {
         Items items = listItems.get(position);
-        holder.imgPhoto.setImageResource(items.getPhoto());
         holder.tvName.setText(items.getName());
         holder.tvDescription.setText(items.getDescription());
         holder.itemView.setOnClickListener(v -> {
             onItemClickCallback.onItemClicked(listItems.get(holder.getAdapterPosition()));
+        });
+        holder.delete_btn.setOnClickListener(v -> {
+            onItemDelClickCallback.onItemClicked(listItems.get(holder.getAdapterPosition()));
         });
     }
 
@@ -53,11 +60,12 @@ public class ListItemsAdapter extends RecyclerView.Adapter<ListItemsAdapter.List
     public class ListViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPhoto;
         TextView tvName, tvDescription;
+        Button delete_btn;
         ListViewHolder(View itemView) {
             super(itemView);
-            imgPhoto = itemView.findViewById(R.id.img_item_photo);
             tvName = itemView.findViewById(R.id.tv_item_name);
             tvDescription = itemView.findViewById(R.id.tv_item_description);
+            delete_btn = itemView.findViewById(R.id.delete_btn);
         }
     }
 }
